@@ -1,0 +1,10 @@
+<root>
+    <person name="Alex">
+        <child name="Marta"/>
+        <child name="Vlad"/>
+    </person>
+    <person name="Maria">
+        <child name="Max"/>
+        <child name="Oliver"/>
+    </person>
+</root>

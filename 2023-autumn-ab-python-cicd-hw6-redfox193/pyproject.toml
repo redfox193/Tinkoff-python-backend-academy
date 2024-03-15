@@ -1,0 +1,50 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "2023-autumn-AB-python-HW6"
+version = "0.1.0"
+description = "HW6"
+authors = ["author"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.103.0"
+uvicorn = "^0.23.2"
+pydantic = "^2.4.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.2"
+pytest-asyncio = "^0.21.1"
+pylint = "^3.0.1"
+httpx = "^0.25.0"
+black = "^23.9.1"
+flake8 = "^6.1.0"
+flake8-todo = "^0.7"
+mypy = "^1.6.0"
+bandit = "^1.7.5"
+
+[build]
+script = "poetry build"
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+
+[tool.flake8]
+ban-todos = true
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers -W error"
+junit_family = "xunit2"
+testpaths = ["tests"]
+xfail_strict = true
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning"
+]
+
+[tool.mypy]
+strict = true

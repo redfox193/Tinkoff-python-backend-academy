@@ -1,0 +1,7 @@
+pytest
+pytest-cov
+pytest-freezer
+pytest-timeout
+respx
+requests
+httpx

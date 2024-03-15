@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  server:
+    image: sergeigoncharov/tink_hw_6:latest
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile
+    ports:
+      - "8000:8000"
+
+  tests:
+    image: tests_hw6:latest
+    build:
+      context: .
+      dockerfile: docker/tests/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/opt/app
+    environment:
+      - PYTHONUNBUFFERED=1

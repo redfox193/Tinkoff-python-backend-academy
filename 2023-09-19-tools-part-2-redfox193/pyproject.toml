@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "hw2_hangman_redfox193"
+version = "0.1.2"
+description = "Simple hangman console game"
+authors = ["Sergei <goncharov.sergei.21@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/central-university-dev/2023-09-19-tools-part-2-redfox193.git"
+packages = [{include = "hangman", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = "^0.25.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "1.5.1"
+wemake-python-styleguide = "0.18.0"
+isort = "5.12.0"
+pytest = "7.4.2"
+pytest-cov = "4.1.0"
+pytest-freezer = "*"
+respx = "*"
+pytest-timeout = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+line_length = 80
+multi_line_output = 3
+include_trailing_comma = true

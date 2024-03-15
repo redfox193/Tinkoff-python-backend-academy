@@ -1,0 +1,26 @@
+name: Deploy application
+
+on:
+  workflow_run:
+    workflows: [ "Static Checks" ]
+    types:
+      - completed
+  push:
+    branches:
+      - '*' 
+
+jobs:
+  upload:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: build image
+        run: |
+          docker-compose build server
+          
+      - name: Login to Docker Hub
+        run: echo ${{ secrets.PASSWORD }} | docker login -u ${{ secrets.USERNAME }} --password-stdin
+      - name: Push the Docker image to Docker Hub
+        run: |
+          docker push sergeigoncharov/tink_hw_6:latest 

@@ -1,0 +1,135 @@
+Request: GET http://127.0.0.1:8000/docs
+Response: 200
+Request: GET http://127.0.0.1:8000/openapi.json
+Response: 200
+Started server process [16852]
+Waiting for application startup.
+Application startup complete.
+Request: GET http://127.0.0.1:8000/
+Response: 404
+Request: GET http://127.0.0.1:8000/docs
+Response: 200
+Request: GET http://127.0.0.1:8000/openapi.json
+Response: 200
+Request: GET http://localhost:8000/docs
+Response: 200
+Request: GET http://localhost:8000/openapi.json
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+forecast with url: http://weather_server:8080/api failed with exception: [Errno 11001] getaddrinfo failed
+forecast with url: http://reserve_weather_server:8081/weather failed with exception: [Errno 11001] getaddrinfo failed
+Response: 503
+Started server process [14608]
+Waiting for application startup.
+Application startup complete.
+Started server process [1992]
+Waiting for application startup.
+Application startup complete.
+Request: GET http://localhost:8000/docs
+Response: 200
+Request: GET http://localhost:8000/openapi.json
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://localhost:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://localhost:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_probability_of_precipitation
+HTTP Request: GET http://localhost:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_probability_of_precipitation
+forecast with url: http://localhost:8080/api failed with exception: [WinError 10061] No connection could be made because the target machine actively refused it
+HTTP Request: GET http://localhost:8081/weather/month "HTTP/1.1 200 OK"
+Response: 200
+Started server process [8]
+Waiting for application startup.
+Application startup complete.
+Request: GET http://localhost:8000/
+Response: 404
+Request: GET http://localhost:8000/docs
+Response: 200
+Request: GET http://localhost:8000/openapi.json
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_average_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_probability_of_precipitation
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Started server process [8]
+Waiting for application startup.
+Application startup complete.
+Request: GET http://localhost:8000/docs
+Response: 200
+Request: GET http://localhost:8000/openapi.json
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+forecast with url: http://weather_server:8080/api failed with exception: [Errno -3] Temporary failure in name resolution
+HTTP Request: GET http://reserve_weather_server:8081/api/month "HTTP/1.1 404 Not Found"
+forecast with url: http://reserve_weather_server:8081/api failed with exception: 404 Client Error: Not Found for url: http://reserve_weather_server:8081/api/month
+For more information check: https://httpstatuses.com/404
+Response: 503
+Started server process [8]
+Waiting for application startup.
+Application startup complete.
+Request: GET http://localhost:8000/
+Response: 404
+Request: GET http://localhost:8000/docs
+Response: 200
+Request: GET http://localhost:8000/openapi.json
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+forecast with url: http://weather_server:8080/api failed with exception: [Errno -3] Temporary failure in name resolution
+HTTP Request: GET http://reserve_weather_server:8081/weather/month "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/parents/parents/Oliver
+Response: 200
+Request: GET http://localhost:8000/api/v1/parents/parents/Maria
+Response: 200
+Started server process [8]
+Waiting for application startup.
+Application startup complete.
+Request: GET http://localhost:8000/
+Response: 404
+Request: GET http://localhost:8000/docs
+Response: 200
+Request: GET http://localhost:8000/openapi.json
+Response: 200
+Request: GET http://localhost:8000/api/v1/parents/parents/Oliver
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_average_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_average_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_three_days_temp
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_probability_of_precipitation
+HTTP Request: GET http://weather_server:8080/api/ "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_probability_of_precipitation
+forecast with url: http://weather_server:8080/api failed with exception: [Errno -3] Temporary failure in name resolution
+HTTP Request: GET http://reserve_weather_server:8081/weather/month "HTTP/1.1 200 OK"
+Response: 200
+Request: GET http://localhost:8000/api/v1/weather/forecast_week_average_temp
+forecast with url: http://weather_server:8080/api failed with exception: [Errno -3] Temporary failure in name resolution
+forecast with url: http://reserve_weather_server:8081/weather failed with exception: [Errno -3] Temporary failure in name resolution
+Response: 503

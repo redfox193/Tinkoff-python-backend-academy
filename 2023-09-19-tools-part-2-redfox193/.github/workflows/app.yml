@@ -1,0 +1,20 @@
+name: Python application
+
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build docker image
+        run: docker build -t tink-ab-hw2 -f ./docker/Dockerfile.python3.12 .
+
+      - name: Run tests
+        run: docker run -t tink-ab-hw2 pytest --cov=src --cov-report=term

@@ -1,0 +1,76 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "2023-autumn-AB-python-patterns-HW12"
+version = "0.1.0"
+description = "HW12"
+authors = ["author"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.68.0"
+uvicorn = "^0.15.0"
+httpx = "^0.19.0"
+psycopg2-binary = "^2.9.9"
+sqlalchemy = "^2.0.22"
+asyncpg = "^0.24.0"
+python-dotenv = "^1.0.0"
+urllib3 = ">= 1.25.3"
+python-dateutil = ">=2.8.2"
+pydantic = "^1.10.5, <2"
+aenum = ">=3.1.11"
+tenacity = "^8.2.3"
+PyYAML = "^6.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-asyncio = "^0.15.1"
+pytest-mock = "^3.12.0"
+pytest-cov = "^4.1"
+pylint = "^3.0.1"
+watchdog = "^3.0.0"
+black = "^23.9.1"
+flake8 = "^6.1.0"
+flake8-todo = "^0.7"
+types-requests = "^2.31.0.9"
+mypy = "^1.6.0"
+alembic = "^1.12.0"
+faker = "^19.10.0"
+
+[build]
+script = "poetry build"
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+
+[tool.flake8]
+ban-todos = true
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers -W error"
+junit_family = "xunit2"
+testpaths = ["tests"]
+xfail_strict = true
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning"
+]
+
+[tool.mypy]
+plugins = ["sqlalchemy.ext.mypy.plugin"]
+strict = true
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 100
+omit = [
+    "server/aspi.py"
+]

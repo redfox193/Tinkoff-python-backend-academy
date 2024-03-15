@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  server:
+    image: myimage:latest
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile
+    ports:
+      - "8000:8000"
+
+  tests:
+    build:
+      context: .
+      dockerfile: docker/tests/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/opt
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - weather_server
+      - reserve_weather_server
+
+  weather_server:
+    build:
+      context: .
+      dockerfile: docker/weather_server/Dockerfile
+    ports:
+      - "8080:8080"
+
+  reserve_weather_server:
+    build:
+      context: .
+      dockerfile: docker/reserve_weather_server/Dockerfile
+    ports:
+      - "8081:8081"

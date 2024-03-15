@@ -1,0 +1,26 @@
+{
+  "persons": [
+    {
+      "name": "Alex",
+      "children": [
+        {
+          "name": "Marta"
+        },
+        {
+          "name": "Vlad"
+        }
+      ]
+    },
+    {
+      "name": "Maria",
+      "children": [
+        {
+          "name": "Max"
+        },
+        {
+          "name": "Oliver"
+        }
+      ]
+    }
+  ]
+}

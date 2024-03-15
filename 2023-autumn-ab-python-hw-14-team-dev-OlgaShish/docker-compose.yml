@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  server:
+    image: myapp:latest
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./sql_app.db:/opt/sql_app.db

@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "python-ab-fall-2023-hw3-redfox193"
+version = "0.1.0"
+description = "Design principles practice"
+authors = ["Sergei goncharov.sergei.21@gamil.com"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^1.4"
+black = "^23.0"
+flake8 = "^6.0.0"
+flake8-annotations-complexity = "^0.0.6"
+flake8-builtins = "^1.4"
+flake8-comprehensions = "^3"
+flake8-eradicate = "^1"
+flake8-isort = "^6"
+flake8-logging-format = "^0.9"
+flake8-print = "^3.1"
+flake8-pytest = "^1.3"
+flake8-pytest-style = "^1"
+flake8-quotes = "^3"
+flake8-return = "^1.0"
+flake8-pyproject = "^1.2.3"
+isort = { version = "^5", extras = ["pyproject"] }
+mypy = "^1.4.1"
+pep8-naming = "^0.11"
+pylint = "*"
+pytest = "*"
+pytest-alembic = "^0.8.0"
+pytest-cov = "^4.1"
+pytest-deadfixtures = "^2"
+pytest-lazy-fixture = "^0.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+check_untyped_defs = true
+dissallow_any_generics = true
+dissallow_incomplete_difs = true
+dissallow_untyped_defs = true
+ignore_missing_imports = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.isort]
+profile = "black"
+line_length = 88
+balanced_wrapping = true
+include_trailing_comma = true
+known_first_party = ["examples", "hw", "tests"]
+multi_line_output = 3
