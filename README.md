@@ -1,1 +1,1 @@
-# Tinkoff-python-backend-academy
+# Tinkoff-python-backend-academy (1 sem)
